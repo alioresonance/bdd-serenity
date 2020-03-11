@@ -1,10 +1,10 @@
-package tech.eastdilsecured.bdd.tasks;
+package tech.ideanamix.qa.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Step;
-import tech.eastdilsecured.bdd.ui.GoogleSearchPage;
+import tech.ideanamix.qa.ui.GoogleSearchPage;
 
 public class OpenTheApplication implements Task {
 

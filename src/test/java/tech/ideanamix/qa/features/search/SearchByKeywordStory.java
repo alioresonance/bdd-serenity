@@ -1,4 +1,4 @@
-package tech.eastdilsecured.bdd.features.search;
+package tech.ideanamix.qa.features.search;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
@@ -11,8 +11,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import tech.eastdilsecured.bdd.tasks.OpenTheApplication;
-import tech.eastdilsecured.bdd.tasks.Search;
+import tech.ideanamix.qa.tasks.OpenTheApplication;
+import tech.ideanamix.qa.tasks.Search;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
 import static net.serenitybdd.screenplay.EventualConsequence.eventually;

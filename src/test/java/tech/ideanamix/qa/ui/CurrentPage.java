@@ -1,4 +1,4 @@
-package tech.eastdilsecured.bdd.ui;
+package tech.ideanamix.qa.ui;
 
 import net.serenitybdd.core.pages.PageObject;
 

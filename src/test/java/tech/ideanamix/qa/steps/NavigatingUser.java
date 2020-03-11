@@ -1,9 +1,9 @@
-package tech.eastdilsecured.bdd.steps;
+package tech.ideanamix.qa.steps;
 
-import tech.eastdilsecured.bdd.model.Category;
-import tech.eastdilsecured.bdd.ui.CategoryNavigationBar;
-import tech.eastdilsecured.bdd.ui.CurrentPage;
-import tech.eastdilsecured.bdd.ui.EbayHomePage;
+import tech.ideanamix.qa.model.Category;
+import tech.ideanamix.qa.ui.CategoryNavigationBar;
+import tech.ideanamix.qa.ui.CurrentPage;
+import tech.ideanamix.qa.ui.EbayHomePage;
 import net.thucydides.core.annotations.Step;
 
 import static org.assertj.core.api.Assertions.assertThat;

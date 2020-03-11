@@ -1,4 +1,4 @@
-package tech.eastdilsecured.bdd.ui;
+package tech.ideanamix.qa.ui;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;

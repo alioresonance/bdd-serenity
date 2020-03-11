@@ -1,8 +1,8 @@
-package tech.eastdilsecured.bdd.ui;
+package tech.ideanamix.qa.ui;
 
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
-import tech.eastdilsecured.bdd.model.Category;
+import tech.ideanamix.qa.model.Category;
 
 public class CategoryNavigationBar extends PageObject {
 

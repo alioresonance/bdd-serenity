@@ -1,4 +1,4 @@
-package tech.eastdilsecured.bdd.tasks;
+package tech.ideanamix.qa.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Step;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static org.openqa.selenium.Keys.ENTER;
 
-import tech.eastdilsecured.bdd.ui.SearchBox;
+import tech.ideanamix.qa.ui.SearchBox;
 
 public class Search implements Task {
 
