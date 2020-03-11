@@ -1,6 +1,14 @@
+/*
+ * **********************************************************
+ *  Copyright (c) 2020  Ideanamix, LLC.  All rights reserved.
+ * **********************************************************
+ */
 package tech.ideanamix.qa.features.navigation;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowsingTheWeb;
+import net.serenitybdd.screenplay.questions.page.TheWebPage;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.junit.BeforeClass;
@@ -10,13 +18,17 @@ import org.openqa.selenium.WebDriver;
 import tech.ideanamix.qa.model.Category;
 import tech.ideanamix.qa.steps.NavigatingUser;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.then;
+import static net.serenitybdd.screenplay.GivenWhenThen.when;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
+import static tech.ideanamix.qa.model.Category.*;
 
 @RunWith(SerenityRunner.class)
 public class WhenBrowsingProductCategories {
 
     @Steps
-    NavigatingUser john;
+    NavigatingUser mark;
 
     @Managed
     WebDriver browser;
@@ -45,11 +57,21 @@ public class WhenBrowsingProductCategories {
     @Test
     public void shouldBeAbleToNavigateToTheMotorsCategory() {
         // Given
-        john.isOnTheHomePage();
+        mark.isOnTheHomePage();
         // When
-        john.navigatesToCategory(Category.Motors);
+        mark.navigatesToCategory(Motors);
         // Then
-        john.shouldSeePageTitleContaining("Auto Parts and Vehicles");
+        mark.shouldSeePageTitleContaining("Auto Parts and Vehicles");
+    }
+
+    @Test
+    public void shouldBeAbleToViewMotorProducts() {
+        Actor mike = Actor.named("Mike");
+        mike.can(BrowsingTheWeb.with(browser));
+
+        when(mike).attemptsTo(NavigateTo.theCategory(Motors));
+        then(mike).should(seeThat(TheWebPage.title(), containsString("New & used cars")));
+
     }
 
     @Test

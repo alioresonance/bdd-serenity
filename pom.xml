@@ -15,26 +15,36 @@
         <serenity.version>2.1.8</serenity.version>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>int</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>int</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>stg</id>
+            <properties>
+                <spring.profiles.active>stg</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
     <repositories>
-      <repository>
-        <snapshots>
-        <enabled>false</enabled>
-        </snapshots>
-        <id>central</id>
-        <name>bintray</name>
-        <url>http://jcenter.bintray.com</url>
-      </repository>
+        <repository>
+            <id>disney-music</id>
+            <name>disney music repo</name>
+            <url>https://artifactory.platform.wds.io/artifactory/music-mvn</url>
+        </repository>
+        <repository>
+            <id>jitpack</id>
+            <name>jitpack</name>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
-    <pluginRepositories>
-      <pluginRepository>
-        <snapshots>
-        <enabled>false</enabled>
-        </snapshots>
-        <id>central</id>
-        <name>bintray-plugins</name>
-        <url>http://jcenter.bintray.com</url>
-      </pluginRepository>
-    </pluginRepositories>
 
     <dependencies>
         <dependency>

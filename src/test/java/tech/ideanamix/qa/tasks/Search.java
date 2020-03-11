@@ -1,3 +1,8 @@
+/*
+ * **********************************************************
+ *  Copyright (c) 2020  Ideanamix, LLC.  All rights reserved.
+ * **********************************************************
+ */
 package tech.ideanamix.qa.tasks;
 
 import net.serenitybdd.screenplay.Actor;
